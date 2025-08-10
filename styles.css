@@ -463,6 +463,71 @@ section {
     color: #b91c1c;
 }
 
+/* Certificates Section */
+.certificates {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.certificate-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.certificate-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(220, 38, 38, 0.2);
+    border-color: #dc2626;
+}
+
+.certificate-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+.certificate-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.certificate-card:hover .certificate-photo {
+    transform: scale(1.05);
+}
+
+.certificate-content {
+    padding: 1.5rem;
+}
+
+.certificate-content h3 {
+    color: #dc2626;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    text-align: center;
+}
+
+.certificate-content p {
+    color: #d1d5db;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
 /* Contact Section */
 .contact-content {
     display: grid;
@@ -641,6 +706,10 @@ section {
     }
 
     .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .certificates-grid {
         grid-template-columns: 1fr;
     }
 
